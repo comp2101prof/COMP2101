@@ -27,5 +27,5 @@ echo ""
 
 echo "12 Largest Files on the system"
 echo "=============================="
-find / -type f -formatmyouput |sort -k 2 -h -r |head 12
+find . -type f -printf "%b %P\n" | sort -n |tail -12
 echo ""
